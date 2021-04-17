@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es-cl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+
+    <!-- Estilos propios -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <title>Contáctanos - Bootstrap</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+            <img src="assets/img/rocket_512x512.png" alt="BRAND" height="80px" width="80px">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="features.html">Features</a>
+                </li>                
+                <li class="nav-item">
+                    <a class="nav-link" href="tables.html">Tables</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="contact.html">Contact  <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Sitios de Interes
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="https://getbootstrap.com" target="_blank">Bootstrap</a>
+                        <a class="dropdown-item" href="https://www.google.cl" target="_blank">Google</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="https://stackoverflow.com/" target="_blank">Stackoverflow</a>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <!--CONTENIDO-->
+    <main class="container mt-4 mb-4">
+        <div class="row">
+            <div class="col-md-6">
+                <form action="#" method="GET" enctype="text/plain">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Ingresa tus datos a continuación...</h3>
+                        </div>
+                        <div class="card-body">                        
+                            <!--Agrupar componentes usando FORM-GROUP-->
+                            <div class="form-group">
+                                <label for="rut" class="font-weight-bold">Rut:</label>
+                                <input class="form-control" type="text" name="rut" id="rut" placeholder="Ej. 12345678-9" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="nombre" class="font-weight-bold">Nombre:</label>
+                                <input class="form-control" type="text" name="nombre" id="nombre" placeholder="Ej. Sacaría Flores del Campo" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="fecha_nacimiento" class="font-weight-bold">Fecha nacimiento:</label>
+                                <input class="form-control" type="date" name="fecha_nacimiento" id="fecha_nacimiento" >
+                            </div>
+        
+                            <!--Agrupar componentes usando FORM-GROUP ROW-->
+                            <div class="form-group row">
+                                <label for="email" class="col-sm-5 col-form-label font-weight-bold">Email:</label>
+                                <div class="col-sm-7">
+                                    <input class="form-control" type="email" name="email" id="email" placeholder="Ej. correo@correo.com" required>
+                                </div>                            
+                            </div>
+                            <div class="form-group row">
+                                <label for="password" class="col-sm-5 col-form-label font-weight-bold">Contraseña:</label>
+                                <div class="col-sm-7">
+                                    <input class="form-control" type="password" name="password" id="password" required>
+                                </div>                            
+                            </div>
+                            <div class="form-group row">
+                                <label for="confirm-password" class="col-sm-5 col-form-label font-weight-bold">Confirmar contraseña:</label>
+                                <div class="col-sm-7">
+                                    <input class="form-control" type="password" name="confirm-password" id="confirm-password" placeholder="Ej. correo@correo.com" required>
+                                </div>
+                            </div>
+                            <!--Radiobutton-->
+                            <div class="form-group row">
+                                <label for="genero" class="col-sm-5 col-form-label font-weight-bold ">Seleccione su género:</label>
+                                <div class="col-sm-7">
+                                    <div class="form-check">
+                                        <div class="form-check-label">
+                                            <label for="masculino" class="form-check-label">
+                                                <input class="form-check-input" type="radio" name="genero" id="masculino" value="masculino">Masculino
+                                            </label>
+                                        </div>
+                                        <div class="form-check-label">
+                                            <label for="femenino" class="form-check-label">
+                                                <input class="form-check-input" type="radio" name="genero" id="femenino" value="femenino">Femenino
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <!--Checkbok-->
+                            <div class="form-group">
+                                <label for="deportes" class="font-weight-bold">Deportes que practicas:</label>
+                                <div class="form-check">
+                                    <div class="form-check-label">
+                                        <label for="ciclismo" class="form-check-label">
+                                            <input class="form-check-input" type="checkbox" name="ciclismo" id="ciclismo" value="ciclismo">Ciclismo
+                                        </label>
+                                    </div>
+                                    <div class="form-check-label">
+                                        <label for="montanismo" class="form-check-label">
+                                            <input class="form-check-input" type="checkbox" name="montanismo" id="montanismo" value="montanismo">Montañismo
+                                        </label>
+                                    </div>
+                                    <div class="form-check-label">
+                                        <label for="natacion" class="form-check-label">
+                                            <input class="form-check-input" type="checkbox" name="natacion" id="natacion" value="natacion">Natación
+                                        </label>
+                                    </div>
+                                    <div class="form-check-label">
+                                        <label for="rayuela_corta" class="form-check-label">
+                                            <input class="form-check-input" type="checkbox" name="rayuela_corta" id="rayuela_corta" value="rayuela_corta">Rayuela
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <!-- Select o Combobox -->
+                            <div class="form-group">
+                                <label for="comuna" class="font-weight-bold">Comuna:</label>
+                                <select name="comuna" id="comuna" class="form-control">
+                                    <option value="Santiago">Santiago</option>
+                                    <option value="Macul">Macul</option>
+                                    <option value="Ñuñoa">Ñuñoa</option>
+                                    <option value="Puente Alto">Puente Alto</option>
+                                    <option value="San Miguel">San Miguel</option>
+                                    <option value="San Joaquín">San Joaquín</option>
+                                </select>
+                            </div>
+    
+                            <!-- Textarea -->
+                            <div class="form-group">
+                                <label for="comentarios" class="font-weight-bold">Comentarios:</label>
+                                <textarea class="form-control" name="comentarios" id="comentarios"  rows="5"></textarea>
+                            </div>
+    
+                            <!-- Toogle button o Switch -->
+                            <div class="form-group">
+                                <div class="custom-control custom-switch">
+                                    <input class="custom-control-input" type="checkbox" name="aceptar_terminos" id="aceptar_terminos" required>
+                                    <label for="aceptar_terminos" class="custom-control-label">Aceptar los términos del contrato.</label>
+                                </div>
+                            </div>                            
+                        </div>
+                        <div class="card-footer text-center">
+                            <!-- Botones -->
+                            <div class="form-group">
+                                <input class="btn btn-primary" type="submit" value="Registrar" id="registrar">
+                                <input class="btn btn-danger" type="reset" value="Cancelar" id="cancelar">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <img class="d-none d-md-block"  src="http://picsum.photos/500/1000" alt="Imagen costado form" width="100%" height="100%">
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer mt-4 py-4 bg-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-3 text-center mt-4 mb-4 ">
+                    <img src="assets/img/rocket_512x512.png" alt="BRAND" height="80px" width="80px">
+                </div>
+                <div class="col-sm-12 col-md-3 mt-4 mb-4">
+                    <p>PGY3121-007V</p>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                          <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="features.html">Features</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="tables.html">Tables</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                          </li>
+                      </ul>
+                </div>
+                <div class="col-sm-12 col-md-6 mt-4 mb-4">
+                    <div class="card bg-dark text-light">
+                        <div class="card-header text-center">
+                            <h3 class="card-title">¡Suscríbete a nuestro newsletter!</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="input-group">
+                                <input type="email" class="form-control" name="email" placeholder="correo@correo.com">
+                                <div class="input-group-append">
+                                    <button class="btn btn-success" type="submit">Enviar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer text-center">
+                            <a class="card-link" href="http://www.facebook.com" target="">
+                                <span style="font-size: 3em;">
+                                    <i class="fab fa-facebook-f"></i>
+                                </span>
+                            </a>
+                            <a class="card-link" href="http://instagram.com" target="">
+                                <span style="font-size: 3em;">
+                                    <i class="fab fa-instagram"></i>
+                                </span>
+                            </a>
+                            <a class="card-link" href="http://twitter.com" target="">
+                                <span style="font-size: 3em;">
+                                    <i class="fab fa-twitter"></i>
+                                </span>
+                            </a>
+                            <a class="card-link" href="http://twitch.tv" target="">
+                                <span style="font-size: 3em;">
+                                    <i class="fab fa-twitch"></i>
+                                </span>
+                            </a>
+                            <a class="card-link" href="http://www.pinterest.com" target="">
+                                <span style="font-size: 3em;">
+                                    <i class="fab fa-pinterest"></i>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </div>
+    <!-- END Footer Section-->
+
+    <!-- Javascript Optional -->
+    <!-- Jquery first, then Popper.js, then Bootstrap JS -->
+    <script src="assets/js/jquery-3.5.1.slim.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+</body>
+</html>
